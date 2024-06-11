@@ -1,12 +1,12 @@
-#define the local valued in terraform
+# Define Local Values in Terraform
 locals {
-  owners = var.business_division
+  owners      = var.business_divsion
   environment = var.environment
-  name = "${var.business_division}-${var.environment}"
-  # name = "${local.owners}-${var.environment}"
+  name        = "${var.business_divsion}-${var.environment}"
+  #name = "${local.owners}-${local.environment}"
   common_tags = {
-	owners = local.owners
-	environment = local.environment
+    owners      = local.owners
+    environment = local.environment
   }
   eks_cluster_name = "${local.name}-${var.cluster_name}"
 }

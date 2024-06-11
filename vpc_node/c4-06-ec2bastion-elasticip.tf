@@ -1,10 +1,9 @@
 # Create Elastic IP for Bastion Host
-# Resource -depends_on Meta-Argument
-
+# Resource - depends_on Meta-Argument
 resource "aws_eip" "bastion_eip" {
-  depends_on = [ module.ec2_public, module.vpc]
-  instance = module.ec2_public.id 
-  # vpc = true
+  depends_on = [module.ec2_public, module.vpc]
+  instance   = module.ec2_public.id
+  #vpc      = true
   domain = "vpc"
-  tags = local.common_tags
+  tags   = local.common_tags
 }

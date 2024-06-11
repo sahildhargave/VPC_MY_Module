@@ -3,6 +3,7 @@ title: EKS Cluster and Node Groups using Terraform
 description: Create AWS EKS Cluster and Node Groups using Terraform
 ---
 
+![alt text](assets/1.png)
 ## Step-00: Introduction 
 1. Create EKS Cluster
 2. Create Public EKS Node Group
